@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-12-4</title>    
+</head>
+<body>
+	<div class="content">
+		<ul>
+			<li class="elem-1" >red</li>
+			<li class="elem-2" >yellow</li>
+			<li class="elem-3" >green</li>
+			<li class="elem-4" >blue</li>
+			<li class="elem-5" >orange</li>
+			<li class="elem-6" >gray</li>
+		</ul>
+	</div>	
+	<style>
+		.content{
+			margin: 0 auto;
+			width: 70%;	
+			font-size: 40px;	
+		}
+		ul{
+			list-style: decimal;			
+			
+		}
+	</style>
+	<script>
+		window.onload = function(){			
+			document.querySelector('ul').onclick = function (event) {
+				event.target.style.color = event.target.innerHTML;
+			}
+		}		
+	</script>
+</body>
+</html>

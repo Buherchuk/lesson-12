@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-12-2</title>    
+</head>
+<body>
+	<div class="content">
+		<div class="block" style="background-color: purple;">
+			<span>У мене є секрет!</span>
+		</div>
+	</div>	
+	<style>
+		.content{
+			display: flex;
+			justify-content: center;
+		}
+		.block{
+			width: 250px;
+			height: 280px;
+			background-color: purple;
+			outline: 4px solid rgb(226, 178, 45);
+			text-align: center;
+			font-size: 24px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+				let style = document.querySelector('.block').style;
+				document.querySelector('.block').onmouseover = function(){
+					document.querySelector('.block').innerHTML = "Хочеш знати який?";
+					style.outline = "4px solid black";
+					style.color = "blue";
+					style.backgroundColor = "yellow";
+										  	
+				}
+					document.querySelector('.block').onmouseout = function(){
+						document.querySelector('.block').innerHTML = "У мене є секрет!";
+						style.backgroundColor = "purple", 
+						style.outline = "4px solid rgb(226, 178, 45)";
+				}
+				 
+					document.querySelector('.block').onmouseup = function(){
+							document.querySelector('.block').innerHTML = "У мене є секрет!";
+							style.backgroundColor = "purple", 
+							style.outline = "4px solid rgb(226, 178, 45)";
+					}
+				
+					document.querySelector('.block').onmousedown = function(){
+						document.querySelector('.block').innerHTML = "А я тобі не скажу!";
+						style.backgroundColor = "black";
+						style.color = "white";
+						style.outline = "4px solid yellow";
+				}
+		}
+		
+	</script>
+
+
+</body>
+
+</html>

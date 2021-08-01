@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-12-3</title>    
+</head>
+<body>
+	<div class="content">
+		<div class="block-first"></div>
+		<div class="block-second"></div>
+		<div class="block-thirt"></div>
+	</div>	
+	<style>
+		.content{
+			display: flex;
+			justify-content: space-around;
+			padding: 5% 0;
+		}
+		.block-first, .block-second, .block-thirt{
+			width: 250px;
+			height: 280px;
+			outline: 4px double black;
+			background-size: cover;
+			
+			
+		}
+	</style>
+	<script>
+		window.onload = function(){
+				let styleFirst = document.querySelector('.block-first').style;
+				let styleSecond = document.querySelector('.block-second').style;
+				let styleThirt = document.querySelector('.block-thirt').style;
+				document.querySelector('.block-first').onclick = function(){
+					let URL = prompt('CTRL+V URL');
+					styleFirst.backgroundImage = `url(${URL})`										  	
+				}
+								
+				document.querySelector('.block-second').onclick = function(){
+					let URL = prompt('CTRL+V URL');
+					styleSecond.backgroundImage = `url(${URL})`										  	
+				}
+								
+				document.querySelector('.block-thirt').onclick = function(){
+					let URL = prompt('CTRL+V URL');
+					styleThirt.backgroundImage = `url(${URL})`										  	
+				}
+
+		}
+		
+	</script>
+
+
+</body>
+
+</html>
